@@ -7,7 +7,7 @@ WORKDIR /home/gradle/src
 RUN ./gradlew bootJar --no-daemon
 
 # 3. 本番用に、アプリを動かすためだけの軽量なJava環境を用意する
-FROM eclipse-temurin:17-jre-jammy
+FROM eclipse-temurin:21-jre-jammy
 EXPOSE 8082
 
 # 4. 作成したプログラムをコピーして、起動する
