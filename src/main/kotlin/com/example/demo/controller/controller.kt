@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.CrossOrigin
 open class ChatController(private val service: ServiceClass){
 //    @CrossOrigin(origins = [""])
     //ローカルで使うときは上をlcoalhost8082にして
-    @PostMapping("/chat")
+    @PostMapping("/")
     suspend fun getAnswer(@RequestBody request: chat): String {
         println(request.ques)
         println(request.prompt)
