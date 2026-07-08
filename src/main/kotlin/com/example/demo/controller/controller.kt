@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.CrossOrigin
 
 @RestController
 open class ChatController(private val service: ServiceClass){
-    @CrossOrigin(origins = ["http://localhost:5173"])
+    @CrossOrigin(origins = ["https://chatbot-front-kmxy.onrender.com/"])
+    //ローカルで使うときは上をlcoalhost8082にして
     @PostMapping("/chat")
     suspend fun getAnswer(@RequestBody request: chat): String {
         println(request.ques)
